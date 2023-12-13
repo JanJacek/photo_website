@@ -1,0 +1,86 @@
+*{
+  /* text Helvetica Neue from google font */
+  font-family: 'Helvetica Neue', sans-serif;
+  color: rgb(104, 104, 104);
+}
+body{
+  margin: 10px 100px;
+  overflow: hidden;
+}
+h1{
+  /* not bold */
+  font-weight: normal;
+  font-size: 29px;
+}
+
+#topBar{
+  /* display flex*/
+  width: 100%;
+  display: flex;
+  /* space between */
+  justify-content: space-between;
+  align-items: end;
+}
+.navi{
+  /* to upper case */
+  text-transform: uppercase;
+  font-size: 14px;
+
+}
+#secBar{
+  /* display flex */
+  display: flex;
+  margin-top: 50px;
+}
+.container{
+  /* display flex */
+  display: flex;
+  justify-content: space-between;
+  /* space between */
+  align-items: center;
+  /* margin top 50px */
+  margin-top: 50px;
+}
+.description{
+  width: 340px;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+.descBtn{
+  width: 340px;
+  margin-right: 40px;
+}
+#descBtn{
+  all: unset;
+}
+
+img{
+  height: 540px;
+  bottom: 100px;
+  left: 100px;
+  position: fixed; /* Umożliwia swobodne poruszanie się obrazka */
+  pointer-events: none;
+}
+
+.arrow{
+  all: unset;
+  margin: 0 10px 0 0;
+}
+/* arrow on hover change text color */
+.arrow:hover{
+  color: rgb(82, 48, 182);
+}
+.descBtn:hover{
+  color: rgb(82, 48, 182);
+}
+
+#bottomBar {
+  margin: 0 100px;              /* Marginesy poziome */
+  display: flex;                /* Ustawienie elementu jako flexbox */
+  justify-content: space-between; /* Rozmieszczenie elementów wewnątrz z przestrzenią pomiędzy nimi */
+  position: fixed;              /* Ustawienie pozycji jako stałej */
+  bottom: 0;                    /* Przypięcie do dołu okna przeglądarki */
+  left: 0;                      /* Ustawienie lewej krawędzi na 0 */
+                   /* Rozciągnięcie na całą szerokość okna przeglądarki */
+  /* Możesz dodać inne właściwości, jak tło, padding, marginesy, itd. */
+}
