@@ -9,42 +9,33 @@
   <title>Aleksandra Żalińska Photography</title>
 </head>
 <body>
-  <!-- top bar -->
-  <div id="topBar">
-    <h1>Aleksandra Żalińska</h1>
-    <p class="navi" id="catalogue">catalogue</p>
-  </div>
-
-  <!-- second bar -->
-  <div id="secBar" class="navi">
-    <div class="descBtn">
-      <button id="descBtn">comment</button>
-    </div>
-    <div>
-      <button id="prev" class="arrow">prev</button>
-      <button id="next" class="arrow">next</button>
-    </div>
-  </div>
-
- <!-- presentation -->
   <div class="container">
-    <div id="desc" class="description">
-    </div>
-    <img src="assets/3.jpg" alt="Monika dolny profil" id="pic" />
-  </div>
+  <!-- first row -->
+    <h1>Aleksandra Żalińska</h1>
+    <Button class="navi" id="catalogue">catalogue</Button>
 
-  <!-- bottom bar -->
-  <div id="bottomBar" class="navi">
-    <div class="descBtn">
-      <button id="descBtn">contact</button>
-
-    </div>
-    <div>
+  <!-- second row -->
+    <button id="commentBtn">comment</button>
+    <div id="flipImg">
       <button id="prev" class="arrow">prev</button>
       <button id="next" class="arrow">next</button>
+    </div>
+
+  <!-- third row -->
+    <p id="comment" class="description"></p>
+    <img id="pic" src="assets/3.jpg" alt="Monika dolny profil"></img>
+
+  <!-- fourth row -->
+    <button id="bioBtn">my biography</button>
+    <button id="contactBtn">contact</button>
+
+    <div class="mediaBox">
+      <button id="prev" class="arrow">fb</button>
+      <button id="next" class="arrow">twitter</button>
     </div>
   </div>
 
   <script src="main.js" />
+  </div>
 </body>
 </html>

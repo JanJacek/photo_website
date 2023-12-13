@@ -5,22 +5,29 @@ document.addEventListener("DOMContentLoaded", function() {
   fetch('assets/text.json')
       .then(response => response.json())
       .then(data => {
-          const miejsceNaTekst = document.getElementById('desc');
-          miejsceNaTekst.textContent = data.description.pl; // Użyj klucza z pliku JSON
+          const miejsceNaTekst = document.getElementById('comment');
+          // Zamiana znaków nowej linii na znaczniki <br>
+          const sformatowanyTekst = data.description.pl.replace(/\n/g, '<br>');
+          miejsceNaTekst.innerHTML = sformatowanyTekst; // Użyj innerHTML zamiast textContent
       })
       .catch(error => console.error('Błąd przy ładowaniu pliku JSON:', error));
 });
-
-const descButton = document.getElementById('descBtn');
+const descButton = document.getElementById('commentBtn');
 descButton.addEventListener('click', function() {
   // hide or show text in div of id desc
-  const miejsceNaTekst = document.getElementById('desc');
+  const miejsceNaTekst = document.getElementById('comment');
   if (miejsceNaTekst.style.display === 'none') {
     miejsceNaTekst.style.display = 'block';
   } else {
     miejsceNaTekst.style.display = 'none';
   }
 });
+
+const body = document.getElementById('body');
+// on hover change obrazek position to fixed
+obrazek.addEventListener('mouseover', function() {
+  obrazek.style.position = 'fixed';
+}); 
 
 
 

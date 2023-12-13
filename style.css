@@ -1,86 +1,74 @@
 *{
-  /* text Helvetica Neue from google font */
   font-family: 'Helvetica Neue', sans-serif;
   color: rgb(104, 104, 104);
 }
-body{
+
+body {
   margin: 10px 100px;
   overflow: hidden;
 }
-h1{
-  /* not bold */
-  font-weight: normal;
-  font-size: 29px;
-}
-
-#topBar{
-  /* display flex*/
-  width: 100%;
-  display: flex;
-  /* space between */
-  justify-content: space-between;
-  align-items: end;
-}
-.navi{
-  /* to upper case */
+button{
+  all: unset;
   text-transform: uppercase;
   font-size: 14px;
+}
+button:hover{
+  color: rgb(216, 95, 19);
+  /* text bold */
+  
+}
+.container {
+  display: grid;
+  grid-template-columns: [col1] 170px [col2] 170px [col3]800px [col4]auto;
+  grid-template-rows: [row1] 80px [row2] 40px [row3] 570px [row4] 10px;
+  grid-column-gap: 20px; /* Odstępy między kolumnami */
+  grid-row-gap: 20px;    /* Odstępy między wierszami */
+}
 
+h1 {
+  grid-area: row1 / col1 / row1 / col3;
+  /* font-weight: normal; */
+  font-size: 24px;
 }
-#secBar{
-  /* display flex */
-  display: flex;
-  margin-top: 50px;
+
+#catalogue {
+  grid-column: col4;
+  grid-row: row1;
 }
-.container{
-  /* display flex */
-  display: flex;
-  justify-content: space-between;
-  /* space between */
-  align-items: center;
-  /* margin top 50px */
-  margin-top: 50px;
+#commentBtn {
+  grid-column: col1;
+  grid-row: row2;
 }
-.description{
-  width: 340px;
-  font-size: 14px;
+#flipImg {
+  grid-column: col3;
+  grid-row: row2;
+}
+#comment {
+  grid-column: col1/col3;
+  grid-row: row3;
+  font-size: 12px;
   color: #9b9b9b;
 }
-.descBtn{
-  width: 340px;
-  margin-right: 40px;
+#pic {
+  grid-column: col3 / col4;
+  grid-row: row3;
+  max-height: 570px;
+  max-width: 800px;
+  /* position: fixed;
+  pointer-events: none; */
 }
-#descBtn{
-  all: unset;
+#bioBtn {
+  grid-column: col1;
+  grid-row: row4;
 }
-
-img{
-  height: 540px;
-  bottom: 100px;
-  left: 100px;
-  position: fixed; /* Umożliwia swobodne poruszanie się obrazka */
-  pointer-events: none;
+#contactBtn {
+  grid-column: col2;
+  grid-row: row4;
 }
-
-.arrow{
-  all: unset;
-  margin: 0 10px 0 0;
-}
-/* arrow on hover change text color */
-.arrow:hover{
-  color: rgb(82, 48, 182);
-}
-.descBtn:hover{
-  color: rgb(82, 48, 182);
-}
-
-#bottomBar {
-  margin: 0 100px;              /* Marginesy poziome */
-  display: flex;                /* Ustawienie elementu jako flexbox */
-  justify-content: space-between; /* Rozmieszczenie elementów wewnątrz z przestrzenią pomiędzy nimi */
-  position: fixed;              /* Ustawienie pozycji jako stałej */
-  bottom: 0;                    /* Przypięcie do dołu okna przeglądarki */
-  left: 0;                      /* Ustawienie lewej krawędzi na 0 */
-                   /* Rozciągnięcie na całą szerokość okna przeglądarki */
-  /* Możesz dodać inne właściwości, jak tło, padding, marginesy, itd. */
+.mediaBox {
+  grid-column: col4;
+  grid-row: row4;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
 }
