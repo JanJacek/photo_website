@@ -40,6 +40,7 @@ h1 {
   grid-row: row2;
 }
 #flipImg {
+  margin-top: 10px;
   grid-column: col3;
   grid-row: row2;
 }
